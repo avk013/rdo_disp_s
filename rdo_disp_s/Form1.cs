@@ -13,14 +13,16 @@ using System.Windows.Forms;
 namespace rdo_disp_s
 {
     public partial class Form1 : Form
-    {
+    {public  string path = @"e:\!rdo\";
         public Form1()
         {
             InitializeComponent();
         }
-        string sudno="";
-        string path = @"e:\!rdo\";
+        string sudno= "", reis ="";
+      
         string[] port;
+        public string[] barj;
+        public List<string> barj_out = new List<string> { };
         private void Form1_Load(object sender, EventArgs e)
         {
             date.Text = DateTime.Today.ToString("dd/MM/yyyy");
@@ -30,7 +32,7 @@ namespace rdo_disp_s
             if (ConnectionAvailable("http://www.google.com") == false)
             {MessageBox.Show("не вижу интернета :(((((");this.Close();};
             init_config();
-            textBox2.Text = sudno;
+            textBox2.Text = "судно:"+sudno;
         }
 
         // процедура проверки есть ли интернет
@@ -64,20 +66,6 @@ namespace rdo_disp_s
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            comboBox5.Enabled = true;comboBox6.Enabled = false;
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            comboBox6.Enabled = true; comboBox5.Enabled = false;
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
         public void init_config()
         {
             if (File.Exists(@path + "config.cfg"))
@@ -101,6 +89,20 @@ namespace rdo_disp_s
             comboBox3.DataSource = comboBox5.DataSource=comboBox8.DataSource= port;
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBox5.Enabled = true;comboBox6.Enabled = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBox6.Enabled = true; comboBox5.Enabled = false;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
             comboBox8.Enabled = true; comboBox7.Enabled = false;
@@ -109,6 +111,20 @@ namespace rdo_disp_s
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             comboBox7.Enabled = true; comboBox8.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox1.DataSource = barj_out;
+            barj2list frm = new barj2list();
+            frm.Owner = this;
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            radiogramma.Text =
+                "РДО ДИСП/РЕКА 01/"+sudno+" 02/"+reis+"";
         }
     }
 }
