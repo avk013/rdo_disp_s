@@ -140,7 +140,7 @@ namespace rdo_disp_s
 
         private void button1_Click(object sender, EventArgs e)
         {//запускаем форму для движения барж
-            listBox1.DataSource = barj_out;
+            listBox2.DataSource = barj_out;
             barj2list frm = new barj2list();
             frm.Owner = this;frm.Show();}
 
@@ -198,6 +198,43 @@ namespace rdo_disp_s
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {File.WriteAllLines(path + "actual.cfg", actual);}//записываем последние актуальные поля
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+            barj = File.ReadAllLines(path + "barj.csv");
+            listBox2.DataSource = barj;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int item = listBox2.SelectedIndex;
+            if (barj[item] != "выгр.>>")
+            {
+                barj_out.Add(barj[item]);
+                barj[item] = "выгр.>>";
+                listBox2.DataSource = null;
+                listBox3.DataSource = null;
+                listBox2.DataSource = barj;
+                listBox3.DataSource = barj_out;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            int item = listBox3.SelectedIndex;
+            int endx = Array.IndexOf(barj, "выгр.>>");
+            // button2.Text = endx.ToString();
+            //barj.Add(barj_out[item]);
+            if (endx >= 0)
+            {
+                barj[endx] = barj_out[item];
+                barj_out.RemoveAt(item);
+                listBox2.DataSource = null;
+                listBox3.DataSource = null;
+                listBox2.DataSource = barj;
+                listBox3.DataSource = barj_out;
+            }
+        }
 
         private void comboBox3_TextChanged(object sender, EventArgs e)
         {

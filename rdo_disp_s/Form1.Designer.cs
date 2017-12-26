@@ -71,8 +71,6 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -123,6 +121,10 @@
             this.radiogramma = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -534,9 +536,11 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.listBox1);
+            this.tabPage3.Controls.Add(this.listBox3);
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.listBox2);
+            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.maskedTextBox1);
             this.tabPage3.Controls.Add(this.dateTimePicker3);
             this.tabPage3.Controls.Add(this.groupBox3);
@@ -546,10 +550,11 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "движения по грузу";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(164, 142);
+            this.button2.Location = new System.Drawing.Point(189, 154);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(319, 23);
             this.button2.TabIndex = 18;
@@ -557,28 +562,9 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(444, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "отбуксировать баржи:>>>";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(570, 5);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(134, 160);
-            this.listBox1.TabIndex = 16;
-            // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(338, 41);
+            this.maskedTextBox1.Location = new System.Drawing.Point(337, 73);
             this.maskedTextBox1.Mask = "00:00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
@@ -587,7 +573,7 @@
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(190, 42);
+            this.dateTimePicker3.Location = new System.Drawing.Point(189, 73);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(142, 20);
             this.dateTimePicker3.TabIndex = 14;
@@ -598,9 +584,9 @@
             this.groupBox3.Controls.Add(this.radioButton6);
             this.groupBox3.Controls.Add(this.comboBox7);
             this.groupBox3.Controls.Add(this.comboBox8);
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Location = new System.Drawing.Point(188, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(181, 64);
+            this.groupBox3.Size = new System.Drawing.Size(250, 64);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "место отбуксировки";
@@ -1073,6 +1059,42 @@
             this.label36.TabIndex = 2;
             this.label36.Text = "направление:";
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(0, 1);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(180, 173);
+            this.listBox2.TabIndex = 19;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(194, 99);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(314, 21);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "отбуксировать >>>";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(517, 1);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(190, 173);
+            this.listBox3.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(189, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 22);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "<<< Вернуть";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1170,8 +1192,6 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox radiogramma;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -1224,6 +1244,10 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button button1;
     }
 }
 
