@@ -43,14 +43,18 @@ namespace rdo_disp_s
         DataColumn a12 = new DataColumn(st++.ToString(), typeof(String));
         DataColumn a13 = new DataColumn(st++.ToString(), typeof(String));
         DataColumn a14 = new DataColumn(st++.ToString(), typeof(String));
-        
-    DataRow dr = null;
+        DataColumn a15 = new DataColumn("Место отбкс.", typeof(String));
+        DataColumn a16 = new DataColumn("Дата отбкс.", typeof(String));
+        DataColumn a17 = new DataColumn("Время отбкс.", typeof(String));
+
+
+        DataRow dr = null;
     //
     public string[] barj;
         public List<string> barj_out = new List<string> { };
         private void Form1_Load(object sender, EventArgs e)
         {//иниц таблицы
-            dt.Columns.AddRange(new DataColumn[] { a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11,a12,a13,a14});
+            dt.Columns.AddRange(new DataColumn[] { a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11,a12,a13,a14,a15,a16,a17});
           
             date.Text = DateTime.Today.ToString("dd/MM/yyyy");
             // но лучше брать время из интернета
@@ -213,13 +217,22 @@ namespace rdo_disp_s
             if (barj[item] != "выгр.>>")
             {
                 barj_out.Add(barj[item]);
+                string barja = barj[item];
                 barj[item] = "выгр.>>";
                 listBox2.DataSource = null;
                 listBox3.DataSource = null;
                 listBox2.DataSource = barj;
                 listBox3.DataSource = barj_out;
                 //+ надо пометить красным с таблице....
-            }
+                int res = 0;
+                for (int i = 0; i < dt.Rows.Count; i++) if (dt.Rows[i][0].ToString()==barja.Trim()){res = i;break;}
+                dataGridView1.Rows[res].DefaultCellStyle.BackColor = Color.Red;
+                // вносим порт или км
+                string port_="";
+
+                dt.Rows[res][15] = port_;
+                dt.Rows[res][16] = dateTimePicker3.Text;
+                dt.Rows[res][17] = maskedTextBox1.Text;}
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -236,8 +249,7 @@ namespace rdo_disp_s
                 listBox3.DataSource = null;
                 listBox2.DataSource = barj;
                 listBox3.DataSource = barj_out;
-            }
-        }
+            }}
 
         private void comboBox3_TextChanged(object sender, EventArgs e)
         {
@@ -291,6 +303,10 @@ for(int i=0;i<dt.Rows.Count;i++) {
 
 
             button3.Enabled = true;
+        }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {         
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)

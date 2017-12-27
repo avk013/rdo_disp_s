@@ -237,17 +237,20 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(715, 203);
             this.tabControl1.TabIndex = 6;
+            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.LightGray;
             this.tabPage1.Controls.Add(this.tabControl2);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tabPage1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(707, 177);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Учет ГСМ и др";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabControl2
             // 
@@ -628,6 +631,8 @@
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker3.Location = new System.Drawing.Point(189, 73);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(142, 20);
