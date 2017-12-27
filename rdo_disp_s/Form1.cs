@@ -275,6 +275,24 @@ namespace rdo_disp_s
 
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            radiogramma.Text =
+                "РДО ДИСП/ОТХОД" + Environment.NewLine + " " + sudno + " " + text_reis.Text + " " + date.Text + " " + time.Text;
+            //+ " " + comboBox1.Text + " " + comboBox2.Text + " " + comboBox3.Text + " " + dateTimePicker1.Text;
+for(int i=0;i<dt.Rows.Count;i++) {
+                if (dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Green)
+                { string buks ="";
+                    if (radioButton1.Checked == true) buks = comboBox5.Text;
+                    if (radioButton2.Checked == true) buks = comboBox6.Text;
+                    radiogramma.Text += dt.Rows[i][0] + time2.Text+ Environment.NewLine+buks;
+                }
+            }
+
+
+            button3.Enabled = true;
+        }
+
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {comboBox8.Enabled = true; comboBox7.Enabled = false;}
 
