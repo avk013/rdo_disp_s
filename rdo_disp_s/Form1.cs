@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace rdo_disp_s
 {
-    public partial class Form1 : Form
+    public partial class Form1  : Form
     { public string path = @"e:\!rdo\";
         public Form1()
         {
