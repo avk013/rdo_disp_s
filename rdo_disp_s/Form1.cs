@@ -30,8 +30,8 @@ namespace rdo_disp_s
         static int st = 0;
         DataColumn a0 = new DataColumn("баржа/судно", typeof(String));
         DataColumn a1 = new DataColumn("груз", typeof(String));
-        DataColumn a2 = new DataColumn(st++.ToString(), typeof(String));
-        DataColumn a3 = new DataColumn(st++.ToString(), typeof(String));
+        DataColumn a2 = new DataColumn("порт назначения", typeof(String));
+        DataColumn a3 = new DataColumn("фрахтователь", typeof(String));
         DataColumn a4 = new DataColumn(st++.ToString(), typeof(String));
         DataColumn a5 = new DataColumn(st++.ToString(), typeof(String));
         DataColumn a6 = new DataColumn(st++.ToString(), typeof(String));
@@ -131,6 +131,10 @@ namespace rdo_disp_s
             comboBox6.DataSource = km_add; //км формирование
             othod_port_i.DataSource = othod_port_in;
             othod_port_o.DataSource = othod_port_out;
+            //
+            if(File.Exists(path + "barj+.csv")) csv2datagridview(path + "barj+.csv", dataGridView1);
+           // csv2datagridview(path + "barj+.csv", dataGridView1);
+            //MessageBox.Show("+");
         }
         public void init_actual()
         {
@@ -150,8 +154,8 @@ namespace rdo_disp_s
         private void button2_Click(object sender, EventArgs e)
         {
             radiogramma.Text =
-                "РДО ДИСП/РЕКА"+Environment.NewLine+"01/"+sudno+" 02/"+text_reis.Text+" 03/"+date.Text+" 04/"+time.Text+ " 05/"+comboBox1.Text+
-                " 06/"+comboBox2.Text+" 07/"+comboBox3.Text+" 08/"+dateTimePicker1.Text  ;
+                "РДО ДИСП/РЕКА"+Environment.NewLine+" "+sudno+" "+text_reis.Text+" "+date.Text+" "+time.Text+ " "+comboBox1.Text+
+                " "+comboBox2.Text+" "+comboBox3.Text+" "+dateTimePicker1.Text  ;
             button3.Enabled = true;
         }
         public void send_mail(string body, string attach)
@@ -248,12 +252,17 @@ namespace rdo_disp_s
             dr = dt.NewRow();
 
             //for (int ii = 0; ii < 6; ii++) { dr[ii] = tab0Values[ii]; }
-            dr[1] = dateTimePicker2.Value.ToString("dd/MM/yyyy");
-            dr[2] = othod_port_i.Text;
-            dr[3] = othod_port_o.Text;
+            dr[0] = comboBox11.Text;
+            dr[1] = comboBox13.Text;
+            dr[2] = othod_port_o.Text;
+            dr[3] = fraht.Text;
+            dr[4] = dateTimePicker2.Value.ToString("dd/MM/yyyy");
+            dr[6] = othod_port_i.Text;
+            
             dt.Rows.Add(dr);
 
         dataGridView1.DataSource = dt;
+            writeCSV(dataGridView1, path + "barj+.csv");
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -262,4 +271,84 @@ namespace rdo_disp_s
         {comboBox8.Enabled = true; comboBox7.Enabled = false;}
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {comboBox7.Enabled = true; comboBox8.Enabled = false;} } }
+        {comboBox7.Enabled = true; comboBox8.Enabled = false;}
+        public void csv2datagridview(string filein, DataGridView gridIn)
+        {
+            //string path = filein;
+            string[] tab0 = File.ReadAllLines(filein, Encoding.UTF8);
+                  MessageBox.Show(tab0.Length.ToString());
+                  string[] tab0Values = null;
+                  DataRow dr = null;
+                  //помещаем файл в виртуальную таблицу
+                  for (int i = 0; i < tab0.Length; i++)
+                  {
+                      if (!String.IsNullOrEmpty(tab0[i]))
+                      {
+                          tab0Values = tab0[i].Split(',');
+                          //создаём новую строку
+                          dr = dt.NewRow();
+
+                          for (int j = 0; j < 11; j++)
+                          {
+                              string valp = tab0Values[j];
+                              // string valp = tab0Values[1].ToUpper();
+
+                              // dr[j] = Regex.Replace(valp, " {2,}", " ");
+                              dr[j] = valp;
+                          }
+                          dt.Rows.Add(dr);
+                      }
+                  }
+                  gridIn.DataSource = dt;
+            radiogramma.Text = "read";
+        }
+        public void writeCSV(DataGridView gridIn, string outputFile)
+        {
+            //test to see if the DataGridView has any rows
+            if (gridIn.RowCount > 0)
+            {
+                string value = "";
+                DataGridViewRow dr = new DataGridViewRow();
+                StreamWriter swOut = new StreamWriter(outputFile);
+
+                //write header rows to csv
+                /*    for (int i = 0; i <= gridIn.Columns.Count - 1; i++)
+                    {
+                        if (i > 0)
+                        {
+                            swOut.Write(",");
+                        }
+                        swOut.Write(gridIn.Columns[i].HeaderText);
+                    }
+                    swOut.WriteLine();
+    */
+                //write DataGridView rows to csv
+                for (int j = 0; j <= gridIn.Rows.Count - 2; j++)
+                {
+                    if (j > 0)
+                    {
+                        swOut.WriteLine();
+                    }
+
+                    dr = gridIn.Rows[j];
+
+                    for (int i = 0; i <= gridIn.Columns.Count - 1; i++)
+                    {
+                        if (i > 0)
+                        {
+                            swOut.Write(",");
+                        }
+
+                        //value = dr.Cells[i].Value.ToString();
+                        //value = dr.Cells[i].ToString();
+                        value = dr.Cells[i].Value.ToString();
+                        //replace comma's with spaces
+                        value = value.Replace(',', ' ');
+                        //replace embedded newlines with spaces
+                        value = value.Replace(Environment.NewLine, " ");
+
+                        swOut.Write(value);
+                    }
+                } swOut.Close();}
+        }
+    } }

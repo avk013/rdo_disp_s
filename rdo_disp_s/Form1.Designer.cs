@@ -125,6 +125,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1033,16 +1034,16 @@
             // 
             this.radiogramma.BackColor = System.Drawing.Color.LightSteelBlue;
             this.radiogramma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radiogramma.Location = new System.Drawing.Point(12, 344);
+            this.radiogramma.Location = new System.Drawing.Point(6, 308);
             this.radiogramma.Multiline = true;
             this.radiogramma.Name = "radiogramma";
-            this.radiogramma.Size = new System.Drawing.Size(695, 108);
+            this.radiogramma.Size = new System.Drawing.Size(707, 144);
             this.radiogramma.TabIndex = 12;
             // 
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(553, 412);
+            this.button3.Location = new System.Drawing.Point(564, 415);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 28);
             this.button3.TabIndex = 13;
@@ -1095,11 +1096,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(16, 423);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(534, 20);
+            this.textBox1.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 662);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.radiogramma);
             this.Controls.Add(this.label10);
@@ -1248,6 +1257,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
