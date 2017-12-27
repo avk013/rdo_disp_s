@@ -70,6 +70,10 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -121,11 +125,8 @@
             this.radiogramma = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -537,6 +538,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.listBox3);
             this.tabPage3.Controls.Add(this.button5);
@@ -552,6 +554,42 @@
             this.tabPage3.Text = "движения по грузу";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(189, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 22);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "<<< Вернуть";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(517, 1);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(190, 173);
+            this.listBox3.TabIndex = 22;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(194, 99);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(314, 21);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "отбуксировать >>>";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(0, 1);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(180, 173);
+            this.listBox2.TabIndex = 19;
             // 
             // button2
             // 
@@ -690,7 +728,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Location = new System.Drawing.Point(467, 6);
+            this.groupBox2.Location = new System.Drawing.Point(589, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(112, 64);
             this.groupBox2.TabIndex = 13;
@@ -990,6 +1028,9 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "вверх",
+            "вниз"});
             this.comboBox2.Location = new System.Drawing.Point(254, 53);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(55, 21);
@@ -1037,6 +1078,7 @@
             this.radiogramma.Location = new System.Drawing.Point(6, 308);
             this.radiogramma.Multiline = true;
             this.radiogramma.Name = "radiogramma";
+            this.radiogramma.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.radiogramma.Size = new System.Drawing.Size(707, 144);
             this.radiogramma.TabIndex = 12;
             // 
@@ -1045,7 +1087,7 @@
             this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(564, 415);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 28);
+            this.button3.Size = new System.Drawing.Size(125, 28);
             this.button3.TabIndex = 13;
             this.button3.Text = "отправить по почте";
             this.button3.UseVisualStyleBackColor = true;
@@ -1060,48 +1102,23 @@
             this.label36.TabIndex = 2;
             this.label36.Text = "направление:";
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(0, 1);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(180, 173);
-            this.listBox2.TabIndex = 19;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(194, 99);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(314, 21);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "отбуксировать >>>";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(517, 1);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(190, 173);
-            this.listBox3.TabIndex = 22;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(189, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 22);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "<<< Вернуть";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(16, 423);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(534, 20);
             this.textBox1.TabIndex = 14;
+            this.textBox1.Text = "комментарий";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(42, 112);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 50);
+            this.button6.TabIndex = 24;
+            this.button6.Text = "получить названия барж";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
@@ -1258,6 +1275,7 @@
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button6;
     }
 }
 

@@ -19,7 +19,7 @@ namespace rdo_disp_s
         {
             InitializeComponent();
         }
-        string sudno = "", reis = "";
+        string sudno = "" ;
         string[] port_csv, fraht_csv,cfg;
         string[] actual = new string [10];
         static string[] km = { "-100", "1", "101", "200" };
@@ -131,10 +131,8 @@ namespace rdo_disp_s
             comboBox6.DataSource = km_add; //км формирование
             othod_port_i.DataSource = othod_port_in;
             othod_port_o.DataSource = othod_port_out;
-            //
+            // считываем данные текущих барж в таблицу
             if(File.Exists(path + "barj+.csv")) csv2datagridview(path + "barj+.csv", dataGridView1);
-           // csv2datagridview(path + "barj+.csv", dataGridView1);
-            //MessageBox.Show("+");
         }
         public void init_actual()
         {
@@ -205,8 +203,8 @@ namespace rdo_disp_s
 
         private void tabPage3_Click(object sender, EventArgs e)
         {
-            barj = File.ReadAllLines(path + "barj.csv");
-            listBox2.DataSource = barj;
+          //  barj = File.ReadAllLines(path + "barj.csv");
+//            listBox2.DataSource = barj;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -220,6 +218,7 @@ namespace rdo_disp_s
                 listBox3.DataSource = null;
                 listBox2.DataSource = barj;
                 listBox3.DataSource = barj_out;
+                //+ надо пометить красным с таблице....
             }
         }
 
@@ -247,11 +246,7 @@ namespace rdo_disp_s
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //string[] tab0Values = null;
-            //tab0Values = files[i].Name.Split('_');
             dr = dt.NewRow();
-
-            //for (int ii = 0; ii < 6; ii++) { dr[ii] = tab0Values[ii]; }
             dr[0] = comboBox11.Text;
             dr[1] = comboBox13.Text;
             dr[2] = othod_port_o.Text;
@@ -260,13 +255,26 @@ namespace rdo_disp_s
             dr[6] = othod_port_i.Text;
             
             dt.Rows.Add(dr);
-
+            int i = dt.Rows.Count;
         dataGridView1.DataSource = dt;
+            dataGridView1.Rows[i-1].DefaultCellStyle.BackColor = Color.Green;
             writeCSV(dataGridView1, path + "barj+.csv");
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {}
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listBox2.DataSource = null;
+            for (int i = 0; i < dt.Rows.Count; i++) //barj[i] = dt.Rows[i][0].ToString();
+                                                    //barj = listBox2.DataSource;
+                                                    //listBox2.DataSource = barj;                
+            listBox2.Items.Add(dt.Rows[i][0]);
+            barj = (from object item in listBox2.Items select item.ToString()).ToArray<string>();
+
+        }
+
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {comboBox8.Enabled = true; comboBox7.Enabled = false;}
 
@@ -276,7 +284,6 @@ namespace rdo_disp_s
         {
             //string path = filein;
             string[] tab0 = File.ReadAllLines(filein, Encoding.UTF8);
-                  MessageBox.Show(tab0.Length.ToString());
                   string[] tab0Values = null;
                   DataRow dr = null;
                   //помещаем файл в виртуальную таблицу
@@ -284,7 +291,7 @@ namespace rdo_disp_s
                   {
                       if (!String.IsNullOrEmpty(tab0[i]))
                       {
-                          tab0Values = tab0[i].Split(',');
+                          tab0Values = tab0[i].Split(';');
                           //создаём новую строку
                           dr = dt.NewRow();
 
@@ -310,18 +317,6 @@ namespace rdo_disp_s
                 string value = "";
                 DataGridViewRow dr = new DataGridViewRow();
                 StreamWriter swOut = new StreamWriter(outputFile);
-
-                //write header rows to csv
-                /*    for (int i = 0; i <= gridIn.Columns.Count - 1; i++)
-                    {
-                        if (i > 0)
-                        {
-                            swOut.Write(",");
-                        }
-                        swOut.Write(gridIn.Columns[i].HeaderText);
-                    }
-                    swOut.WriteLine();
-    */
                 //write DataGridView rows to csv
                 for (int j = 0; j <= gridIn.Rows.Count - 2; j++)
                 {
@@ -336,17 +331,13 @@ namespace rdo_disp_s
                     {
                         if (i > 0)
                         {
-                            swOut.Write(",");
+                            swOut.Write(";");
                         }
-
-                        //value = dr.Cells[i].Value.ToString();
-                        //value = dr.Cells[i].ToString();
                         value = dr.Cells[i].Value.ToString();
                         //replace comma's with spaces
                         value = value.Replace(',', ' ');
                         //replace embedded newlines with spaces
                         value = value.Replace(Environment.NewLine, " ");
-
                         swOut.Write(value);
                     }
                 } swOut.Close();}
