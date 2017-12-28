@@ -156,8 +156,8 @@ namespace rdo_disp_s
         private void button2_Click(object sender, EventArgs e)
         {
             radiogramma.Text =
-                "РДО ДИСП/РЕКА"+Environment.NewLine+" "+sudno+" "+text_reis.Text+" "+date.Text+" "+time.Text+ " "+comboBox1.Text+
-                " "+comboBox2.Text+" "+comboBox3.Text+" "+dateTimePicker1.Text  ;
+                "РДО ДИСП/РЕКА"+Environment.NewLine+sudno+"\t"+text_reis.Text+"\t"+date.Text+"\t"+time.Text+ "\t"+comboBox1.Text+
+                "\t"+comboBox2.Text+"\t"+comboBox3.Text+"\t"+dateTimePicker1.Text  ;
             button3.Enabled = true;
         }
         public void send_mail(string body, string attach)
@@ -297,7 +297,7 @@ for(int i=0;i<dt.Rows.Count;i++) {
                 { string buks ="";
                     if (radioButton1.Checked == true) buks = comboBox5.Text;
                     if (radioButton2.Checked == true) buks = comboBox6.Text;
-                    radiogramma.Text += dt.Rows[i][0] + time2.Text+ Environment.NewLine+buks;
+                    radiogramma.Text +=Environment.NewLine+ dt.Rows[i][0] + time2.Text+ buks;
                 }
             }
 

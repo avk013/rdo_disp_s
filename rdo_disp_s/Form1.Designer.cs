@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.text_reis = new System.Windows.Forms.TextBox();
@@ -85,6 +84,11 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.comboBox17 = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -125,12 +129,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -139,10 +138,9 @@
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -724,6 +722,57 @@
             this.tabPage2.Text = "отход";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(261, 151);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(168, 23);
+            this.button7.TabIndex = 17;
+            this.button7.Text = "формировать радиограмму";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label33);
+            this.groupBox4.Controls.Add(this.maskedTextBox3);
+            this.groupBox4.Controls.Add(this.comboBox16);
+            this.groupBox4.Controls.Add(this.comboBox17);
+            this.groupBox4.Location = new System.Drawing.Point(15, 114);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(227, 60);
+            this.groupBox4.TabIndex = 16;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "количество";
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(30, 13);
+            this.maskedTextBox3.Mask = "00000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(44, 20);
+            this.maskedTextBox3.TabIndex = 13;
+            // 
+            // comboBox16
+            // 
+            this.comboBox16.FormattingEnabled = true;
+            this.comboBox16.Items.AddRange(new object[] {
+            "т.",
+            "шт.",
+            "ед."});
+            this.comboBox16.Location = new System.Drawing.Point(84, 33);
+            this.comboBox16.Name = "comboBox16";
+            this.comboBox16.Size = new System.Drawing.Size(50, 21);
+            this.comboBox16.TabIndex = 9;
+            // 
+            // comboBox17
+            // 
+            this.comboBox17.FormattingEnabled = true;
+            this.comboBox17.Location = new System.Drawing.Point(140, 33);
+            this.comboBox17.Name = "comboBox17";
+            this.comboBox17.Size = new System.Drawing.Size(81, 21);
+            this.comboBox17.TabIndex = 10;
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(438, 151);
@@ -740,7 +789,7 @@
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label32.Location = new System.Drawing.Point(549, 91);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(19, 13);
+            this.label32.Size = new System.Drawing.Size(20, 13);
             this.label32.TabIndex = 14;
             this.label32.Text = "→";
             // 
@@ -1101,66 +1150,14 @@
             this.textBox1.TabIndex = 14;
             this.textBox1.Text = "комментарий";
             // 
-            // groupBox4
+            // label33
             // 
-            this.groupBox4.Controls.Add(this.maskedTextBox3);
-            this.groupBox4.Controls.Add(this.pictureBox1);
-            this.groupBox4.Controls.Add(this.comboBox16);
-            this.groupBox4.Controls.Add(this.comboBox17);
-            this.groupBox4.Location = new System.Drawing.Point(15, 114);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(227, 60);
-            this.groupBox4.TabIndex = 16;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "количество";
-            // 
-            // comboBox16
-            // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Items.AddRange(new object[] {
-            "т.",
-            "шт.",
-            "ед."});
-            this.comboBox16.Location = new System.Drawing.Point(6, 13);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(50, 21);
-            this.comboBox16.TabIndex = 9;
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(61, 13);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(81, 21);
-            this.comboBox17.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(197, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(92, 37);
-            this.maskedTextBox3.Mask = "00000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox3.TabIndex = 13;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(261, 151);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(168, 23);
-            this.button7.TabIndex = 17;
-            this.button7.Text = "формировать радиограмму";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(9, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(18, 13);
+            this.label33.TabIndex = 14;
+            this.label33.Text = "т.:";
             // 
             // Form1
             // 
@@ -1208,13 +1205,12 @@
             this.groupBox3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1320,10 +1316,10 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox16;
         private System.Windows.Forms.ComboBox comboBox17;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label33;
     }
 }
 
