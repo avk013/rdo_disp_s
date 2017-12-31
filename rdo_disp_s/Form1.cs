@@ -20,7 +20,7 @@ namespace rdo_disp_s
             InitializeComponent();
         }
         string sudno = "" ;
-        string[] port_csv, fraht_csv,cfg;
+        string[] port_csv, fraht_csv, rukav_csv, gruz_csv,suda_csv, cfg;
         string[] actual = new string [10];
         static string[] km = { "-100", "1", "101", "200" };
         static string[] km_action = new string[km.Length], km_add = new string[km.Length];
@@ -109,11 +109,18 @@ namespace rdo_disp_s
             // считываем в массивы
             actual= File.ReadAllLines(@path + "actual.cfg");
             init_actual();
-            port_csv = File.ReadAllLines(@path + "port.csv");
+            //port_csv = File.ReadAllLines(@path + "port.csv");
+            port_csv = csv2array(@path + "sport.csv", 1);
+            rukav_csv = csv2array(@path + "rukav.csv", 1);
+            gruz_csv=csv2array(@path + "sgruz.csv", 1);
+
             Array.Resize(ref othod_port_out, port_csv.Length);
             Array.Resize(ref othod_port_in, port_csv.Length);
             //othod_port_out new string[port_csv.Length];
-            fraht_csv = File.ReadAllLines(@path + "frahtovatel.csv");
+            fraht_csv = csv2array(@path + "frahtovatel.csv",1);
+            suda_csv = csv2array(@path + "ssuda.csv", 2);
+            //rukav_csv= File.ReadAllLines(@path + "rukav.csv");
+
             //копирование массивов списков
             Array.Copy(km, km_action, km.Length);
             Array.Copy(km, km_add, km.Length);
@@ -128,11 +135,17 @@ namespace rdo_disp_s
             comboBox3.DataSource = comboBox5.DataSource=comboBox8.DataSource= port_csv;
             comboBox3.AutoCompleteMode=othod_port_i.AutoCompleteMode=othod_port_o.AutoCompleteMode = AutoCompleteMode.SuggestAppend;//создает поиск по буквам
             comboBox3.AutoCompleteSource = othod_port_i.AutoCompleteSource=othod_port_o.AutoCompleteSource= AutoCompleteSource.ListItems;//создает поиск по буквам
-            
+            rukav_box.DataSource = rukav_csv;
+            //rukav_box.Items.Remove("");
+            rukav_box.SelectedItem = "Дунай";
+            //rukav_box. = true;
+
             fraht.DataSource = fraht_csv;
+            comboBox11.DataSource = suda_csv;
             comboBox1.DataSource = km;//км главная
             comboBox7.DataSource = km_action; //км движение
             comboBox6.DataSource = km_add; //км формирование
+            comboBox13.DataSource = gruz_csv;
             othod_port_i.DataSource = othod_port_in;
             othod_port_o.DataSource = othod_port_out;
             // считываем данные текущих барж в таблицу
@@ -151,7 +164,11 @@ namespace rdo_disp_s
             frm.Owner = this;frm.Show();}
 
         private void button3_Click(object sender, EventArgs e)
-        { send_mail(radiogramma.Text,"");}
+        {   send_mail(radiogramma.Text,"");
+            for (int i = 0; i <= dt.Rows.Count; i++)
+            if (dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Red) { dt.Rows[i].Delete();i = -1; }
+            writeCSV(dataGridView1, path + "barj+.csv");
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -295,8 +312,8 @@ namespace rdo_disp_s
 for(int i=0;i<dt.Rows.Count;i++) {
                 if (dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Green)
                 { string buks ="";
-                    if (radioButton1.Checked == true) buks = comboBox5.Text;
-                    if (radioButton2.Checked == true) buks = comboBox6.Text;
+                  //  if (radioButton1.Checked == true) buks = comboBox5.Text;
+                    //if (radioButton2.Checked == true) buks = comboBox6.Text;
                     radiogramma.Text +=Environment.NewLine+ dt.Rows[i][0] + time2.Text+ buks;
                 }
             }
@@ -343,6 +360,12 @@ for(int i=0;i<dt.Rows.Count;i++) {
                   gridIn.DataSource = dt;
             radiogramma.Text = "read";
         }
+        public string[] csv2array(string inputFile, int column=0)
+        { if (File.Exists(inputFile)){ string[] f = File.ReadAllLines(inputFile, System.Text.Encoding.GetEncoding(1251));//nado UTF8
+                string[] outf = new string[f.Length]; //outf[0] = "";
+                for (int i = 1; i < f.Length; i++)
+                { string[] Line = f[i].Split(';'); outf[i-1] = Line[column]; }
+                return outf; } else { File.Create(inputFile); return null; } }
         public void writeCSV(DataGridView gridIn, string outputFile)
         {
             //test to see if the DataGridView has any rows

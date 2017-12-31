@@ -86,6 +86,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.comboBox17 = new System.Windows.Forms.ComboBox();
@@ -95,8 +96,6 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.time2 = new System.Windows.Forms.MaskedTextBox();
@@ -129,7 +128,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
+            this.rukav_box = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -220,9 +221,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 458);
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 471);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(715, 203);
+            this.dataGridView1.Size = new System.Drawing.Size(954, 203);
             this.dataGridView1.TabIndex = 5;
             // 
             // tabControl1
@@ -233,7 +234,7 @@
             this.tabControl1.Location = new System.Drawing.Point(2, 99);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(715, 203);
+            this.tabControl1.Size = new System.Drawing.Size(951, 203);
             this.tabControl1.TabIndex = 6;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             // 
@@ -556,7 +557,7 @@
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(707, 177);
+            this.tabPage3.Size = new System.Drawing.Size(943, 177);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "движения по грузу";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -717,7 +718,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(707, 177);
+            this.tabPage2.Size = new System.Drawing.Size(943, 177);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "отход";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -744,6 +745,15 @@
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "количество";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(9, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(18, 13);
+            this.label33.TabIndex = 14;
+            this.label33.Text = "т.:";
             // 
             // maskedTextBox3
             // 
@@ -797,7 +807,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Location = new System.Drawing.Point(589, 6);
+            this.groupBox2.Location = new System.Drawing.Point(795, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(112, 64);
             this.groupBox2.TabIndex = 13;
@@ -828,54 +838,30 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.label38);
+            this.groupBox1.Controls.Add(this.label37);
+            this.groupBox1.Controls.Add(this.rukav_box);
             this.groupBox1.Controls.Add(this.comboBox6);
             this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Location = new System.Drawing.Point(280, 6);
+            this.groupBox1.Location = new System.Drawing.Point(451, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(181, 64);
+            this.groupBox1.Size = new System.Drawing.Size(283, 64);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "место под букс";
             // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "км";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.Text = "порт";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(60, 38);
+            this.comboBox6.Location = new System.Drawing.Point(177, 38);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(79, 21);
+            this.comboBox6.Size = new System.Drawing.Size(95, 21);
             this.comboBox6.TabIndex = 8;
             // 
             // comboBox5
             // 
-            this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(60, 15);
+            this.comboBox5.Location = new System.Drawing.Point(156, 15);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(116, 21);
             this.comboBox5.TabIndex = 8;
@@ -1115,17 +1101,17 @@
             // 
             this.radiogramma.BackColor = System.Drawing.Color.LightSteelBlue;
             this.radiogramma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radiogramma.Location = new System.Drawing.Point(6, 308);
+            this.radiogramma.Location = new System.Drawing.Point(2, 308);
             this.radiogramma.Multiline = true;
             this.radiogramma.Name = "radiogramma";
             this.radiogramma.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.radiogramma.Size = new System.Drawing.Size(707, 144);
+            this.radiogramma.Size = new System.Drawing.Size(951, 157);
             this.radiogramma.TabIndex = 12;
             // 
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(564, 415);
+            this.button3.Location = new System.Drawing.Point(801, 423);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(125, 28);
             this.button3.TabIndex = 13;
@@ -1144,26 +1130,44 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(16, 423);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(534, 20);
+            this.textBox1.Size = new System.Drawing.Size(779, 26);
             this.textBox1.TabIndex = 14;
             this.textBox1.Text = "комментарий";
             // 
-            // label33
+            // rukav_box
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(9, 16);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(18, 13);
-            this.label33.TabIndex = 14;
-            this.label33.Text = "т.:";
+            this.rukav_box.FormattingEnabled = true;
+            this.rukav_box.Location = new System.Drawing.Point(6, 16);
+            this.rukav_box.Name = "rukav_box";
+            this.rukav_box.Size = new System.Drawing.Size(112, 21);
+            this.rukav_box.TabIndex = 8;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(124, 21);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(33, 13);
+            this.label37.TabIndex = 9;
+            this.label37.Text = "порт:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(153, 43);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(24, 13);
+            this.label38.TabIndex = 10;
+            this.label38.Text = "км:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 662);
+            this.ClientSize = new System.Drawing.Size(952, 673);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.radiogramma);
@@ -1244,8 +1248,6 @@
         private System.Windows.Forms.MaskedTextBox time2;
         private System.Windows.Forms.MaskedTextBox time;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1320,6 +1322,9 @@
         private System.Windows.Forms.ComboBox comboBox17;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox rukav_box;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
     }
 }
 
