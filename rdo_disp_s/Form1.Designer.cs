@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -70,7 +69,14 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rukav_dv_2 = new System.Windows.Forms.ComboBox();
+            this.port_dv_2 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.km_dv_2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -78,11 +84,29 @@
             this.button2 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label43 = new System.Windows.Forms.Label();
+            this.operacia = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.rukav_dv_zad = new System.Windows.Forms.ComboBox();
+            this.port_dv_zad = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.km_dv_zad = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rukav_dv_1 = new System.Windows.Forms.ComboBox();
+            this.port_dv_1 = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.km_dv_1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.port_dv_zahod = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.km_dv_zahod = new System.Windows.Forms.ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -96,8 +120,11 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.rukav_othod_mesto = new System.Windows.Forms.ComboBox();
+            this.km_othod_mesto = new System.Windows.Forms.ComboBox();
+            this.port_othod_mesto = new System.Windows.Forms.ComboBox();
             this.time2 = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.othod_port_o = new System.Windows.Forms.ComboBox();
@@ -114,30 +141,22 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.time = new System.Windows.Forms.MaskedTextBox();
             this.radiogramma = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.rukav_box = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -157,7 +176,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 35);
+            this.label3.Location = new System.Drawing.Point(315, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 2;
@@ -165,7 +184,7 @@
             // 
             // text_reis
             // 
-            this.text_reis.Location = new System.Drawing.Point(170, 28);
+            this.text_reis.Location = new System.Drawing.Point(375, 18);
             this.text_reis.Name = "text_reis";
             this.text_reis.Size = new System.Drawing.Size(100, 20);
             this.text_reis.TabIndex = 3;
@@ -185,7 +204,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(276, 35);
+            this.label2.Location = new System.Drawing.Point(481, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 2;
@@ -193,7 +212,7 @@
             // 
             // date
             // 
-            this.date.Location = new System.Drawing.Point(315, 28);
+            this.date.Location = new System.Drawing.Point(520, 18);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(72, 20);
             this.date.TabIndex = 3;
@@ -202,21 +221,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(393, 35);
+            this.label4.Location = new System.Drawing.Point(598, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "время:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 282);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "груз:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // dataGridView1
             // 
@@ -231,12 +240,12 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(2, 99);
+            this.tabControl1.Location = new System.Drawing.Point(2, 34);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(951, 203);
+            this.tabControl1.Size = new System.Drawing.Size(951, 285);
             this.tabControl1.TabIndex = 6;
-            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -247,7 +256,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(707, 177);
+            this.tabPage1.Size = new System.Drawing.Size(943, 259);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Учет ГСМ и др";
             // 
@@ -546,39 +555,117 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.listBox3);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.listBox2);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.maskedTextBox1);
-            this.tabPage3.Controls.Add(this.dateTimePicker3);
-            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.tabControl3);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.dateTimePicker1);
+            this.tabPage3.Controls.Add(this.port_dv_zahod);
+            this.tabPage3.Controls.Add(this.comboBox2);
+            this.tabPage3.Controls.Add(this.km_dv_zahod);
+            this.tabPage3.Controls.Add(this.label36);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label9);
+            this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(943, 177);
+            this.tabPage3.Size = new System.Drawing.Size(943, 259);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "движения по грузу";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // button6
+            // tabControl3
             // 
-            this.button6.Location = new System.Drawing.Point(42, 112);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 50);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "получить названия барж";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.tabControl3.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tabControl3.Controls.Add(this.tabPage7);
+            this.tabControl3.Controls.Add(this.tabPage8);
+            this.tabControl3.Location = new System.Drawing.Point(0, 61);
+            this.tabControl3.Multiline = true;
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(920, 191);
+            this.tabControl3.TabIndex = 34;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.groupBox3);
+            this.tabPage7.Controls.Add(this.button1);
+            this.tabPage7.Controls.Add(this.listBox3);
+            this.tabPage7.Controls.Add(this.button5);
+            this.tabPage7.Controls.Add(this.listBox2);
+            this.tabPage7.Controls.Add(this.button2);
+            this.tabPage7.Controls.Add(this.maskedTextBox1);
+            this.tabPage7.Controls.Add(this.dateTimePicker3);
+            this.tabPage7.Location = new System.Drawing.Point(23, 4);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(893, 183);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "отбуксировка";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rukav_dv_2);
+            this.groupBox3.Controls.Add(this.port_dv_2);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label40);
+            this.groupBox3.Controls.Add(this.km_dv_2);
+            this.groupBox3.Location = new System.Drawing.Point(189, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(283, 64);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "местоположение";
+            // 
+            // rukav_dv_2
+            // 
+            this.rukav_dv_2.FormattingEnabled = true;
+            this.rukav_dv_2.Location = new System.Drawing.Point(6, 16);
+            this.rukav_dv_2.Name = "rukav_dv_2";
+            this.rukav_dv_2.Size = new System.Drawing.Size(94, 21);
+            this.rukav_dv_2.TabIndex = 8;
+            // 
+            // port_dv_2
+            // 
+            this.port_dv_2.FormattingEnabled = true;
+            this.port_dv_2.Location = new System.Drawing.Point(127, 16);
+            this.port_dv_2.Name = "port_dv_2";
+            this.port_dv_2.Size = new System.Drawing.Size(116, 21);
+            this.port_dv_2.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(97, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "порт:";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(153, 43);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(24, 13);
+            this.label40.TabIndex = 10;
+            this.label40.Text = "км:";
+            // 
+            // km_dv_2
+            // 
+            this.km_dv_2.FormattingEnabled = true;
+            this.km_dv_2.Location = new System.Drawing.Point(177, 38);
+            this.km_dv_2.Name = "km_dv_2";
+            this.km_dv_2.Size = new System.Drawing.Size(95, 21);
+            this.km_dv_2.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(189, 126);
+            this.button1.Location = new System.Drawing.Point(189, 121);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 22);
-            this.button1.TabIndex = 23;
+            this.button1.TabIndex = 32;
             this.button1.Text = "<<< Вернуть";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -586,17 +673,17 @@
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(517, 1);
+            this.listBox3.Location = new System.Drawing.Point(517, 4);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(190, 173);
-            this.listBox3.TabIndex = 22;
+            this.listBox3.TabIndex = 31;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(194, 99);
+            this.button5.Location = new System.Drawing.Point(194, 94);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(314, 21);
-            this.button5.TabIndex = 20;
+            this.button5.TabIndex = 30;
             this.button5.Text = "отбуксировать >>>";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -604,92 +691,252 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(0, 1);
+            this.listBox2.Location = new System.Drawing.Point(2, 4);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(180, 173);
-            this.listBox2.TabIndex = 19;
+            this.listBox2.TabIndex = 29;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(189, 154);
+            this.button2.Location = new System.Drawing.Point(189, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(319, 23);
-            this.button2.TabIndex = 18;
+            this.button2.TabIndex = 28;
             this.button2.Text = "формировать радиограмму";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(337, 73);
+            this.maskedTextBox1.Location = new System.Drawing.Point(337, 68);
             this.maskedTextBox1.Mask = "00:00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 15;
+            this.maskedTextBox1.TabIndex = 27;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(189, 73);
+            this.dateTimePicker3.Location = new System.Drawing.Point(189, 68);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(142, 20);
-            this.dateTimePicker3.TabIndex = 14;
+            this.dateTimePicker3.TabIndex = 26;
             // 
-            // groupBox3
+            // tabPage8
             // 
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
-            this.groupBox3.Controls.Add(this.comboBox7);
-            this.groupBox3.Controls.Add(this.comboBox8);
-            this.groupBox3.Location = new System.Drawing.Point(188, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(250, 64);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "место отбуксировки";
+            this.tabPage8.Controls.Add(this.label43);
+            this.tabPage8.Controls.Add(this.operacia);
+            this.tabPage8.Controls.Add(this.groupBox6);
+            this.tabPage8.Location = new System.Drawing.Point(23, 4);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(893, 183);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "задержка";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // label43
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 42);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(39, 17);
-            this.radioButton5.TabIndex = 0;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "км";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(312, 22);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(58, 13);
+            this.label43.TabIndex = 37;
+            this.label43.Text = "операция:";
             // 
-            // radioButton6
+            // operacia
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 19);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(48, 17);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.Text = "порт";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            this.operacia.FormattingEnabled = true;
+            this.operacia.Location = new System.Drawing.Point(315, 41);
+            this.operacia.Name = "operacia";
+            this.operacia.Size = new System.Drawing.Size(116, 21);
+            this.operacia.TabIndex = 36;
             // 
-            // comboBox7
+            // groupBox6
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(60, 38);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(79, 21);
-            this.comboBox7.TabIndex = 8;
+            this.groupBox6.Controls.Add(this.rukav_dv_zad);
+            this.groupBox6.Controls.Add(this.port_dv_zad);
+            this.groupBox6.Controls.Add(this.label41);
+            this.groupBox6.Controls.Add(this.label42);
+            this.groupBox6.Controls.Add(this.km_dv_zad);
+            this.groupBox6.Location = new System.Drawing.Point(6, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(283, 64);
+            this.groupBox6.TabIndex = 35;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "местоположение";
             // 
-            // comboBox8
+            // rukav_dv_zad
             // 
-            this.comboBox8.Enabled = false;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(60, 15);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(116, 21);
-            this.comboBox8.TabIndex = 8;
+            this.rukav_dv_zad.FormattingEnabled = true;
+            this.rukav_dv_zad.Location = new System.Drawing.Point(6, 16);
+            this.rukav_dv_zad.Name = "rukav_dv_zad";
+            this.rukav_dv_zad.Size = new System.Drawing.Size(94, 21);
+            this.rukav_dv_zad.TabIndex = 8;
+            // 
+            // port_dv_zad
+            // 
+            this.port_dv_zad.FormattingEnabled = true;
+            this.port_dv_zad.Location = new System.Drawing.Point(127, 16);
+            this.port_dv_zad.Name = "port_dv_zad";
+            this.port_dv_zad.Size = new System.Drawing.Size(116, 21);
+            this.port_dv_zad.TabIndex = 8;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(97, 22);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(33, 13);
+            this.label41.TabIndex = 9;
+            this.label41.Text = "порт:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(153, 43);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(24, 13);
+            this.label42.TabIndex = 10;
+            this.label42.Text = "км:";
+            // 
+            // km_dv_zad
+            // 
+            this.km_dv_zad.FormattingEnabled = true;
+            this.km_dv_zad.Location = new System.Drawing.Point(177, 38);
+            this.km_dv_zad.Name = "km_dv_zad";
+            this.km_dv_zad.Size = new System.Drawing.Size(95, 21);
+            this.km_dv_zad.TabIndex = 8;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rukav_dv_1);
+            this.groupBox5.Controls.Add(this.port_dv_1);
+            this.groupBox5.Controls.Add(this.label39);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.km_dv_1);
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(283, 64);
+            this.groupBox5.TabIndex = 33;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "местоположение";
+            // 
+            // rukav_dv_1
+            // 
+            this.rukav_dv_1.FormattingEnabled = true;
+            this.rukav_dv_1.Location = new System.Drawing.Point(6, 16);
+            this.rukav_dv_1.Name = "rukav_dv_1";
+            this.rukav_dv_1.Size = new System.Drawing.Size(94, 21);
+            this.rukav_dv_1.TabIndex = 8;
+            // 
+            // port_dv_1
+            // 
+            this.port_dv_1.FormattingEnabled = true;
+            this.port_dv_1.Location = new System.Drawing.Point(127, 16);
+            this.port_dv_1.Name = "port_dv_1";
+            this.port_dv_1.Size = new System.Drawing.Size(116, 21);
+            this.port_dv_1.TabIndex = 8;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(97, 22);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(33, 13);
+            this.label39.TabIndex = 9;
+            this.label39.Text = "порт:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(153, 43);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(24, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "км:";
+            // 
+            // km_dv_1
+            // 
+            this.km_dv_1.FormattingEnabled = true;
+            this.km_dv_1.Location = new System.Drawing.Point(177, 38);
+            this.km_dv_1.Name = "km_dv_1";
+            this.km_dv_1.Size = new System.Drawing.Size(95, 21);
+            this.km_dv_1.TabIndex = 8;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(637, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
+            this.dateTimePicker1.TabIndex = 32;
+            // 
+            // port_dv_zahod
+            // 
+            this.port_dv_zahod.FormattingEnabled = true;
+            this.port_dv_zahod.Location = new System.Drawing.Point(637, 8);
+            this.port_dv_zahod.Name = "port_dv_zahod";
+            this.port_dv_zahod.Size = new System.Drawing.Size(166, 21);
+            this.port_dv_zahod.TabIndex = 29;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "вверх",
+            "вниз"});
+            this.comboBox2.Location = new System.Drawing.Point(399, 11);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(55, 21);
+            this.comboBox2.TabIndex = 30;
+            // 
+            // km_dv_zahod
+            // 
+            this.km_dv_zahod.FormattingEnabled = true;
+            this.km_dv_zahod.Location = new System.Drawing.Point(837, 27);
+            this.km_dv_zahod.Name = "km_dv_zahod";
+            this.km_dv_zahod.Size = new System.Drawing.Size(55, 21);
+            this.km_dv_zahod.TabIndex = 31;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(322, 19);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(76, 13);
+            this.label36.TabIndex = 25;
+            this.label36.Text = "направление:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(781, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "километр:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(458, 41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(159, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "предполагаемая дата захода:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(456, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "предполагаемый порт захода:";
             // 
             // tabPage2
             // 
@@ -718,16 +965,16 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(943, 177);
+            this.tabPage2.Size = new System.Drawing.Size(943, 259);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "отход";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(261, 151);
+            this.button7.Location = new System.Drawing.Point(230, 180);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(168, 23);
+            this.button7.Size = new System.Drawing.Size(213, 23);
             this.button7.TabIndex = 17;
             this.button7.Text = "формировать радиограмму";
             this.button7.UseVisualStyleBackColor = true;
@@ -838,11 +1085,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.port_othod_mesto);
             this.groupBox1.Controls.Add(this.label38);
             this.groupBox1.Controls.Add(this.label37);
-            this.groupBox1.Controls.Add(this.rukav_box);
-            this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Controls.Add(this.comboBox5);
+            this.groupBox1.Controls.Add(this.rukav_othod_mesto);
+            this.groupBox1.Controls.Add(this.km_othod_mesto);
             this.groupBox1.Location = new System.Drawing.Point(451, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(283, 64);
@@ -850,21 +1097,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "место под букс";
             // 
-            // comboBox6
+            // label38
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(177, 38);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(95, 21);
-            this.comboBox6.TabIndex = 8;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(153, 43);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(24, 13);
+            this.label38.TabIndex = 10;
+            this.label38.Text = "км:";
             // 
-            // comboBox5
+            // label37
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(156, 15);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(116, 21);
-            this.comboBox5.TabIndex = 8;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(124, 21);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(33, 13);
+            this.label37.TabIndex = 9;
+            this.label37.Text = "порт:";
+            // 
+            // rukav_othod_mesto
+            // 
+            this.rukav_othod_mesto.FormattingEnabled = true;
+            this.rukav_othod_mesto.Location = new System.Drawing.Point(6, 16);
+            this.rukav_othod_mesto.Name = "rukav_othod_mesto";
+            this.rukav_othod_mesto.Size = new System.Drawing.Size(112, 21);
+            this.rukav_othod_mesto.TabIndex = 8;
+            // 
+            // km_othod_mesto
+            // 
+            this.km_othod_mesto.FormattingEnabled = true;
+            this.km_othod_mesto.Location = new System.Drawing.Point(177, 38);
+            this.km_othod_mesto.Name = "km_othod_mesto";
+            this.km_othod_mesto.Size = new System.Drawing.Size(95, 21);
+            this.km_othod_mesto.TabIndex = 8;
+            // 
+            // port_othod_mesto
+            // 
+            this.port_othod_mesto.FormattingEnabled = true;
+            this.port_othod_mesto.Location = new System.Drawing.Point(156, 15);
+            this.port_othod_mesto.Name = "port_othod_mesto";
+            this.port_othod_mesto.Size = new System.Drawing.Size(116, 21);
+            this.port_othod_mesto.TabIndex = 8;
             // 
             // time2
             // 
@@ -1006,91 +1279,9 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "судно:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "километр:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(328, 61);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "предполагаемый порт захода:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(330, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(159, 13);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "предполагаемая дата захода:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(610, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(28, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "воз:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(68, 53);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(55, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "вверх",
-            "вниз"});
-            this.comboBox2.Location = new System.Drawing.Point(254, 53);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(55, 21);
-            this.comboBox2.TabIndex = 8;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(509, 50);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(166, 21);
-            this.comboBox3.TabIndex = 8;
-            this.comboBox3.TextChanged += new System.EventHandler(this.comboBox3_TextChanged);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(644, 100);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(73, 21);
-            this.comboBox4.TabIndex = 8;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(509, 77);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
             // time
             // 
-            this.time.Location = new System.Drawing.Point(433, 28);
+            this.time.Location = new System.Drawing.Point(638, 18);
             this.time.Mask = "00:00";
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(56, 20);
@@ -1101,11 +1292,11 @@
             // 
             this.radiogramma.BackColor = System.Drawing.Color.LightSteelBlue;
             this.radiogramma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radiogramma.Location = new System.Drawing.Point(2, 308);
+            this.radiogramma.Location = new System.Drawing.Point(2, 318);
             this.radiogramma.Multiline = true;
             this.radiogramma.Name = "radiogramma";
             this.radiogramma.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.radiogramma.Size = new System.Drawing.Size(951, 157);
+            this.radiogramma.Size = new System.Drawing.Size(951, 147);
             this.radiogramma.TabIndex = 12;
             // 
             // button3
@@ -1119,15 +1310,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(177, 61);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(76, 13);
-            this.label36.TabIndex = 2;
-            this.label36.Text = "направление:";
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1137,32 +1319,6 @@
             this.textBox1.TabIndex = 14;
             this.textBox1.Text = "комментарий";
             // 
-            // rukav_box
-            // 
-            this.rukav_box.FormattingEnabled = true;
-            this.rukav_box.Location = new System.Drawing.Point(6, 16);
-            this.rukav_box.Name = "rukav_box";
-            this.rukav_box.Size = new System.Drawing.Size(112, 21);
-            this.rukav_box.TabIndex = 8;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(124, 21);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(33, 13);
-            this.label37.TabIndex = 9;
-            this.label37.Text = "порт:";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(153, 43);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(24, 13);
-            this.label38.TabIndex = 10;
-            this.label38.Text = "км:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1171,27 +1327,16 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.radiogramma);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.time);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.date);
             this.Controls.Add(this.text_reis);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "РДО";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -1205,8 +1350,17 @@
             this.tabPage4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1229,40 +1383,22 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox date;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.MaskedTextBox time2;
         private System.Windows.Forms.MaskedTextBox time;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox km_othod_mesto;
+        private System.Windows.Forms.ComboBox port_othod_mesto;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.TextBox radiogramma;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage4;
@@ -1309,22 +1445,54 @@
         private System.Windows.Forms.ComboBox fraht;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.ComboBox comboBox16;
         private System.Windows.Forms.ComboBox comboBox17;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox rukav_box;
+        private System.Windows.Forms.ComboBox rukav_othod_mesto;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox port_dv_1;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox rukav_dv_1;
+        private System.Windows.Forms.ComboBox km_dv_1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox port_dv_zahod;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox km_dv_zahod;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox port_dv_2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox rukav_dv_2;
+        private System.Windows.Forms.ComboBox km_dv_2;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.ComboBox operacia;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox rukav_dv_zad;
+        private System.Windows.Forms.ComboBox port_dv_zad;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox km_dv_zad;
     }
 }
 

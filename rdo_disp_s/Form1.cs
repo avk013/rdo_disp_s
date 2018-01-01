@@ -92,10 +92,6 @@ namespace rdo_disp_s
                 return false;  }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         public void init_config()
         {
@@ -112,6 +108,7 @@ namespace rdo_disp_s
             //port_csv = File.ReadAllLines(@path + "port.csv");
             port_csv = csv2array(@path + "sport.csv", 1);
             rukav_csv = csv2array(@path + "rukav.csv", 1);
+
             gruz_csv=csv2array(@path + "sgruz.csv", 1);
 
             Array.Resize(ref othod_port_out, port_csv.Length);
@@ -132,19 +129,23 @@ namespace rdo_disp_s
             if (!File.Exists(path + @"/out/")) Directory.CreateDirectory(path + @"/out/");
             if (!File.Exists(path + @"/error/")) Directory.CreateDirectory(path + @"/error/");
             // помещаем данные в выпадающие списки           
-            comboBox3.DataSource = comboBox5.DataSource=comboBox8.DataSource= port_csv;
-            comboBox3.AutoCompleteMode=othod_port_i.AutoCompleteMode=othod_port_o.AutoCompleteMode = AutoCompleteMode.SuggestAppend;//создает поиск по буквам
-            comboBox3.AutoCompleteSource = othod_port_i.AutoCompleteSource=othod_port_o.AutoCompleteSource= AutoCompleteSource.ListItems;//создает поиск по буквам
-            rukav_box.DataSource = rukav_csv;
+            port_dv_zahod.DataSource = port_csv;
+            port_othod_mesto.DataSource = port_csv;
+            port_dv_zahod.AutoCompleteMode=othod_port_i.AutoCompleteMode=othod_port_o.AutoCompleteMode = AutoCompleteMode.SuggestAppend;//создает поиск по буквам
+            port_dv_zahod.AutoCompleteSource = othod_port_i.AutoCompleteSource=othod_port_o.AutoCompleteSource= AutoCompleteSource.ListItems;//создает поиск по буквам
+            rukav_othod_mesto.DataSource = rukav_csv;
+            rukav_dv_1.DataSource = rukav_csv;
+            rukav_dv_2.DataSource = rukav_csv;
+            rukav_dv_zad.DataSource = rukav_csv;
             //rukav_box.Items.Remove("");
-            rukav_box.SelectedItem = "Дунай";
+            rukav_othod_mesto.SelectedItem = "Дунай";
             //rukav_box. = true;
 
             fraht.DataSource = fraht_csv;
             comboBox11.DataSource = suda_csv;
-            comboBox1.DataSource = km;//км главная
-            comboBox7.DataSource = km_action; //км движение
-            comboBox6.DataSource = km_add; //км формирование
+            km_dv_zahod.DataSource = km;//км главная
+            port_dv_2.DataSource = km_action; //км движение
+            km_othod_mesto.DataSource = km_add; //км формирование
             comboBox13.DataSource = gruz_csv;
             othod_port_i.DataSource = othod_port_in;
             othod_port_o.DataSource = othod_port_out;
@@ -164,17 +165,17 @@ namespace rdo_disp_s
             frm.Owner = this;frm.Show();}
 
         private void button3_Click(object sender, EventArgs e)
-        {   send_mail(radiogramma.Text,"");
-            for (int i = 0; i <= dt.Rows.Count; i++)
-            if (dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Red) { dt.Rows[i].Delete();i = -1; }
-            writeCSV(dataGridView1, path + "barj+.csv");
-        }
+        {send_mail(radiogramma.Text,"");
+         for (int i = 0; i <= dt.Rows.Count; i++) {//измавляемся от цветовых выделений с удалением красн. 
+          if (dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Green) dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White;
+          if (dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Red) { dt.Rows[i].Delete();i = -1; }}
+          writeCSV(dataGridView1, path + "barj+.csv");button3.Enabled = false;}
 
         private void button2_Click(object sender, EventArgs e)
         {
             radiogramma.Text =
-                "РДО ДИСП/РЕКА"+Environment.NewLine+sudno+"\t"+text_reis.Text+"\t"+date.Text+"\t"+time.Text+ "\t"+comboBox1.Text+
-                "\t"+comboBox2.Text+"\t"+comboBox3.Text+"\t"+dateTimePicker1.Text  ;
+                "РДО ДИСП/РЕКА"+Environment.NewLine+sudno+"\t"+text_reis.Text+"\t"+date.Text+"\t"+time.Text+ "\t"+km_dv_zahod.Text+
+                "\t"+comboBox2.Text+"\t"+port_dv_zahod.Text+"\t"+dateTimePicker1.Text  ;
             button3.Enabled = true;
         }
         public void send_mail(string body, string attach)
@@ -208,13 +209,13 @@ namespace rdo_disp_s
                     File.WriteAllText(path + @"/error/" + DateTime.Now.ToString("dd-MMMM-yyyy_HH-mm.txt") + ".txt", radiogramma.Text);
                     }}
      private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {comboBox5.Enabled = true;comboBox6.Enabled = false;}
+        {port_othod_mesto.Enabled = true;km_othod_mesto.Enabled = false;}
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {comboBox6.Enabled = true; comboBox5.Enabled = false;}
+        {km_othod_mesto.Enabled = true; port_othod_mesto.Enabled = false;}
         private void textBox1_TextChanged(object sender, EventArgs e)
         {actual[0] = text_reis.Text;}
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
-        {actual[1] = comboBox1.Text;}
+        {actual[1] = km_dv_zahod.Text;}
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {File.WriteAllLines(path + "actual.cfg", actual); }//записываем последние актуальные поля
@@ -262,40 +263,27 @@ namespace rdo_disp_s
             {
                 barj[endx] = barj_out[item];
                 barj_out.RemoveAt(item);
-                listBox2.DataSource = null;
-                listBox3.DataSource = null;
-                listBox2.DataSource = barj;
-                listBox3.DataSource = barj_out;
+                listBox2.DataSource = null;listBox3.DataSource = null;
+                listBox2.DataSource = barj;listBox3.DataSource = barj_out;
             }}
 
-        private void comboBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button4_Click(object sender, EventArgs e)
-        {
-            dr = dt.NewRow();
-            dr[0] = comboBox11.Text;
-            dr[1] = comboBox13.Text;
-            dr[2] = othod_port_o.Text;
-            dr[3] = fraht.Text;
-            dr[4] = dateTimePicker2.Value.ToString("dd/MM/yyyy");
-            dr[6] = othod_port_i.Text;
-            
-            dt.Rows.Add(dr);
-            int i = dt.Rows.Count;
-        dataGridView1.DataSource = dt;
-            dataGridView1.Rows[i-1].DefaultCellStyle.BackColor = Color.Green;
-            writeCSV(dataGridView1, path + "barj+.csv");
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {}
+        {dr = dt.NewRow();
+         dr[0] = comboBox11.Text;
+         dr[1] = comboBox13.Text;
+         dr[2] = othod_port_o.Text;
+         dr[3] = fraht.Text;
+         dr[4] = dateTimePicker2.Value.ToString("dd/MM/yyyy");
+         dr[6] = othod_port_i.Text;
+         dt.Rows.Add(dr);
+         int i = dt.Rows.Count;dataGridView1.DataSource = dt;
+         dataGridView1.Rows[i-1].DefaultCellStyle.BackColor = Color.Green;
+         writeCSV(dataGridView1, path + "barj+.csv");}
 
         private void button6_Click(object sender, EventArgs e)
         {
-            listBox2.DataSource = null;
+            listBox2.DataSource = null;listBox2.Items.Clear();
             for (int i = 0; i < dt.Rows.Count; i++) //barj[i] = dt.Rows[i][0].ToString();
                                                     //barj = listBox2.DataSource;
                                                     //listBox2.DataSource = barj;                
@@ -303,6 +291,15 @@ namespace rdo_disp_s
             barj = (from object item in listBox2.Items select item.ToString()).ToArray<string>();
 
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)//выбрана вкладка отбуксировки
+            {   listBox2.DataSource = null; listBox2.Items.Clear();
+                for (int i = 0; i < dt.Rows.Count; i++) //если цвет красный значит выгружено
+                if(dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Red) listBox2.Items.Add("выгр.>>"); else listBox2.Items.Add(dt.Rows[i][0]);                  
+                barj = (from object item in listBox2.Items select item.ToString()).ToArray<string>();
+            }}
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -312,25 +309,15 @@ namespace rdo_disp_s
 for(int i=0;i<dt.Rows.Count;i++) {
                 if (dataGridView1.Rows[i].DefaultCellStyle.BackColor == Color.Green)
                 { string buks ="";
-                  //  if (radioButton1.Checked == true) buks = comboBox5.Text;
-                    //if (radioButton2.Checked == true) buks = comboBox6.Text;
-                    radiogramma.Text +=Environment.NewLine+ dt.Rows[i][0] + time2.Text+ buks;
-                }
+                  radiogramma.Text +=Environment.NewLine+ dt.Rows[i][0] + time2.Text+ buks;}
             }
-
-
-            button3.Enabled = true;
-        }
-
-        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
-        {         
-        }
+            button3.Enabled = true;}
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {comboBox8.Enabled = true; comboBox7.Enabled = false;}
+        {rukav_dv_2.Enabled = true; port_dv_2.Enabled = false;}
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {comboBox7.Enabled = true; comboBox8.Enabled = false;}
+        {port_dv_2.Enabled = true; rukav_dv_2.Enabled = false;}
         public void csv2datagridview(string filein, DataGridView gridIn)
         {
             //string path = filein;
@@ -350,7 +337,6 @@ for(int i=0;i<dt.Rows.Count;i++) {
                           {
                               string valp = tab0Values[j];
                               // string valp = tab0Values[1].ToUpper();
-
                               // dr[j] = Regex.Replace(valp, " {2,}", " ");
                               dr[j] = valp;
                           }
@@ -385,18 +371,13 @@ for(int i=0;i<dt.Rows.Count;i++) {
                     dr = gridIn.Rows[j];
 
                     for (int i = 0; i <= gridIn.Columns.Count - 1; i++)
-                    {
-                        if (i > 0)
-                        {
-                            swOut.Write(";");
-                        }
+                    {if (i > 0) swOut.Write(";");                      
                         value = dr.Cells[i].Value.ToString();
                         //replace comma's with spaces
                         value = value.Replace(',', ' ');
                         //replace embedded newlines with spaces
                         value = value.Replace(Environment.NewLine, " ");
-                        swOut.Write(value);
-                    }
+                        swOut.Write(value);}
                 } swOut.Close();}
         }
     } }
